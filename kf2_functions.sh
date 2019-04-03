@@ -111,6 +111,7 @@ function launch() {
     cmd+="?Difficulty=$KF_DIFFICULTY"
     cmd+="?AdminPassword=$KF_ADMIN_PASS"
     [[ -z "$KF_GAME_PASS" ]] || cmd+="?GamePassword=$KF_GAME_PASS"
+    [[ -n "$KF_EXTRA_ARGS" ]] && cmd+="$KF_EXTRA_ARGS"
     cmd+=" -Port=$KF_PORT"
     cmd+=" -WebAdminPort=$KF_WEBADMIN_PORT"
     cmd+=" -QueryPort=$KF_QUERY_PORT"
